@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_09_01_163647) do
+ActiveRecord::Schema.define(version: 2024_09_01_163850) do
 
   create_table "attendance_setups", force: :cascade do |t|
     t.boolean "roaster"
@@ -56,8 +56,17 @@ ActiveRecord::Schema.define(version: 2024_09_01_163647) do
     t.index ["employee_id"], name: "index_financial_packages_on_employee_id"
   end
 
+  create_table "terminations", force: :cascade do |t|
+    t.date "date"
+    t.integer "employee_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["employee_id"], name: "index_terminations_on_employee_id"
+  end
+
   add_foreign_key "attendance_setups", "branches"
   add_foreign_key "branches", "companies"
   add_foreign_key "employees", "branches"
   add_foreign_key "financial_packages", "employees"
+  add_foreign_key "terminations", "employees"
 end
