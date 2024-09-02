@@ -14,3 +14,13 @@ zenhr = Company.find_or_create_by(name: 'ZenHR')
 amman = zenhr.branches.find_or_create_by(name: 'Amman Branch', location:'Amman')
 dubai = zenhr.branches.find_or_create_by(name: 'Dubai Branch', location:'Duabi')
 
+employee1_Amman= amman.employees.find_or_create_by(name:"employee 1 amman ", email:"naheel@zenhr.com", hiring_date:"2020-01-01", employment_number: "1")
+employee2_Amman= amman.employees.find_or_create_by(name:"employee 2 amman ", employment_number: "2", email:"naheel1@zenhr.com", hiring_date:"2020-01-01")
+employee3_Amman_termination= amman.employees.find_or_create_by(name:"employee 3 amman terminate", employment_number: "3", email:"naheel3@zenhr.com", hiring_date:"2020-01-01")
+
+employee1_Dubai= dubai.employees.find_or_create_by(name:"employee 1 dubai ", employment_number: "1", email:"naheel4@zenhr.com", hiring_date:"2020-01-01")
+employee2_Dubai= dubai.employees.find_or_create_by(name:"employee 2 dubai ", employment_number: "2", email:"nahee5@zenhr.com", hiring_date:"2020-01-01")
+employee3_Dubai_termination= dubai.employees.find_or_create_by(name:"employee 3 dubai terminate", employment_number: "3", email:"naheel6@zenhr.com", hiring_date:"2020-01-01")
+
+
+
