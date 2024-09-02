@@ -8,6 +8,9 @@
 # db/seed.rb
 
 
-akhtaboot = Company.create(name: 'Akhtaboot')
-zenhr = Company.create(name: 'ZenHR')
+akhtaboot = Company.find_or_create_by(name: 'Akhtaboot')
+zenhr = Company.find_or_create_by(name: 'ZenHR')
+
+amman = zenhr.branches.find_or_create_by(name: 'Amman Branch', location:'Amman')
+dubai = zenhr.branches.find_or_create_by(name: 'Dubai Branch', location:'Duabi')
 
