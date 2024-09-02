@@ -1,6 +1,6 @@
 class Employee < ApplicationRecord
   belongs_to :branch
-  has_many :financial_package
+  has_many :financial_packages
   has_one :termination
   has_many :rooms
 

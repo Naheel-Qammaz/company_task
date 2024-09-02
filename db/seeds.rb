@@ -24,3 +24,10 @@ employee3_Dubai= dubai.employees.find_or_create_by(name:"employee 3 dubai ", emp
 
 
 Termination.find_or_create_by(employee: employee3_Amman_termination, date: "2024-12-31")
+
+
+employee1_Amman.financial_packages.find_or_create_by(from_date:"2023-01-01", to_date:"2023-12-31", amount: 500)
+employee1_Amman.financial_packages.find_or_create_by(from_date:"2024-01-01", to_date:"2024-12-31", amount: 600)
+
+employee2_Amman.financial_packages.find_or_create_by(from_date:"2023-01-01", to_date:"2023-12-31", amount: 500)
+employee2_Amman.financial_packages.find_or_create_by(from_date:"2024-01-01", to_date:"2024-12-31", amount: 600)

@@ -1,6 +1,6 @@
 class FinancialPackage < ApplicationRecord
   belongs_to :employee
-  alidates :from_date, presence: true
+  validates :from_date, presence: true
   validate :from_date_cannot_be_before_2023
   validates :to_date, presence: true
   validate :to_date_cannot_be_before_from_date
