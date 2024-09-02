@@ -58,8 +58,10 @@ ActiveRecord::Schema.define(version: 2024_09_01_164014) do
 
   create_table "rooms", force: :cascade do |t|
     t.string "name"
+    t.integer "branch_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["branch_id"], name: "index_rooms_on_branch_id"
   end
 
   create_table "terminations", force: :cascade do |t|
@@ -74,5 +76,6 @@ ActiveRecord::Schema.define(version: 2024_09_01_164014) do
   add_foreign_key "branches", "companies"
   add_foreign_key "employees", "branches"
   add_foreign_key "financial_packages", "employees"
+  add_foreign_key "rooms", "branches"
   add_foreign_key "terminations", "employees"
 end

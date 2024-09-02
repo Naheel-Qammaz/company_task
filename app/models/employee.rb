@@ -2,7 +2,7 @@ class Employee < ApplicationRecord
   belongs_to :branch
   has_many :financial_packages
   has_one :termination
-  has_many :rooms
+  has_and_belongs_to_many :rooms
 
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true

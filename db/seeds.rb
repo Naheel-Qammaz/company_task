@@ -31,3 +31,7 @@ employee1_Amman.financial_packages.find_or_create_by(from_date:"2024-01-01", to_
 
 employee2_Amman.financial_packages.find_or_create_by(from_date:"2023-01-01", to_date:"2023-12-31", amount: 500)
 employee2_Amman.financial_packages.find_or_create_by(from_date:"2024-01-01", to_date:"2024-12-31", amount: 600)
+
+
+amman_meeting_room_1 = amman.rooms.create!(name: "Amman Meeting Room 1")
+amman_meeting_room_2 = amman.rooms.create!(name: "Amman Meeting Room 2")
